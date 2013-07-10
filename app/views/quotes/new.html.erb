@@ -5,6 +5,6 @@
   <%= f.input :amount, label: 'How Many' %>
   <%= f.input :color, collection: @colors %>
   <%= f.input :hasdesign, as: :boolean, label: 'Custom Design' %>
-  <%= f.input :note, label: 'Special Notes or Requests' %>
+  <%= f.input :note, :input_html => { :cols => 50, :rows => 3 }, label: 'Special Notes or Requests' %>
   <%= f.button :submit %>
 <% end %>
