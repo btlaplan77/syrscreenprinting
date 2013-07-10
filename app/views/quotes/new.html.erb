@@ -1,0 +1,10 @@
+<h2> get your quote:</h2>
+
+<%= simple_form_for @quote do |f| %>
+  <%= f.input :make, collection: @types, label: 'Thread Type' %>
+  <%= f.input :amount, label: 'How Many' %>
+  <%= f.input :color, collection: @colors %>
+  <%= f.input :hasdesign, as: :boolean, label: 'Custom Design' %>
+  <%= f.input :note, label: 'Special Notes or Requests' %>
+  <%= f.button :submit %>
+<% end %>
