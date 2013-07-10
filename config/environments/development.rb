@@ -16,6 +16,18 @@ Syrscreenprinting::Application.configure do
 
 config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+config.after_initialize do
+  Bullet.enable = true
+  Bullet.alert = true
+  Bullet.bullet_logger = true
+  Bullet.console = true
+  Bullet.growl = false
+  Bullet.xmpp = false
+  Bullet.rails_logger = true
+  Bullet.airbrake = true
+end
+
+
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false

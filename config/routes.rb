@@ -1,8 +1,11 @@
 Syrscreenprinting::Application.routes.draw do
+  devise_for :admins
+
   devise_for :users
 
   resources :pages
   resources :quotes
+  resources :orders
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

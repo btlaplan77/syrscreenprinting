@@ -8,6 +8,8 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 gem 'devise'
 gem 'simple_form'
+gem "bullet", :group => "development"
+gem 'uniform_notifier'
 
 
 # Gems used only for assets and not required
