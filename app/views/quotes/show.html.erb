@@ -1,9 +1,9 @@
 
 
-<h4>your BRAND NEW quote: $</h4>
-<p>id:<%= @quote.id %></p>
-<p>type:<%= @quote.make %></p>
-<p>number:<%= @quote.amount %></p>
-<p>color:<%= @quote.color %></p>
-<p>design?:<%= @quote.hasdesign %></p>
-<p>notes:<%= @quote.note %></p>
+<h3>Your Quote: $<%= @quote.price %></h3>
+<p>Email: <%= @quote.user_email %></p>
+<p>Thread: <%= @quote.make %></p>
+<p>Amount: <%= @quote.amount %></p>
+<p>Color: <%= @quote.color %></p>
+<p>Custom Design?: <%= @quote.hasdesign %></p>
+<p>Notes: <%= @quote.note %></p>
