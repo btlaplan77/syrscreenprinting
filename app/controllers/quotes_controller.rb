@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
 
-before_filter :authenticate_user!, :except => [:new, :create]
+before_filter :authenticate_user!, :except => [:index, :new, :create]
 
 
 def index
@@ -15,7 +15,11 @@ end
 def create
 	@quote = Quote.new(params[:quote])
 	respond_to do |format|
+
       if @quote.save
+
+        Notifier.approve(@quote).deliver
+
         format.html { redirect_to "/", notice: "Your quote being approved. You will recieve an email shortly!", popup: "1" }
         format.json { render json: @quote, status: :created, location: @quote }
       else

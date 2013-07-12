@@ -1,6 +1,17 @@
-Hello Sirs,
+<p>Hello Sirs, </p>
 
-A new quote for needs approval.
+A new quote needs approval.
+
+Quote ID: <%= @quote.id %>
+Email: <%= @quote.user_email %>
+Price: $<%= @quote.price %>
+<br />
+<br />
+Thread: <%= @quote.make %>
+Amount: <%= @quote.amount %>
+Color: <%= @quote.color %>
+Notes: <%= @quote.note %>
+
 
 
 <%= link_to 'Approve', "/admin/orders" %>

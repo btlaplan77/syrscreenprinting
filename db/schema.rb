@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20130710203831) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "color"
-    t.string   "email"
+    t.string   "user_email"
   end
 
   create_table "users", :force => true do |t|
